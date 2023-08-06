@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<!-- ---------------------I have added style file and script file in one html file for your convinience---------------------- -->
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'REM', sans-serif;
+    }
+
+    .page-content{
+        margin-top: 100px;
+        width: 646px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: hwb(138.98deg 87.15% 0%);
+    }
+
+    .title{
+        text-align: center;
+        border: 1 px solid grey;
+        padding: 10px;
+        /* background-color: rgb(169, 250, 196); */
+        
+    }
+
+    .text{
+        color: #007F61; 
+        padding: 10px;
+    }
+
+    .cart-item{
+        /* background-color: rgb(252, 193, 145); */
+        display: grid;
+        grid-template-areas: 'radio namePrice namePrice namePrice namePrice discount';
+    }
+
+    .grid-item-1{
+       grid-area: radio;
+       display: flex;
+       justify-content: center;
+    }
+
+    .grid-item-2{
+        grid-area: namePrice;
+    }
+
+    .grid-item-3{
+        grid-area: discount;
+        display: flex;
+        align-items: center;
+    }
+
+    .discount{
+        display: flex;
+        align-items: center;
+    }
+
+    .border{
+        padding: 10px;
+        border: 1px solid grey;
+        margin: 10px;
+        background-color: #F4FBF9;
+    }
+
+    .total{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .cartButton{
+        border: none; 
+        background-color: transparent; 
+        width : -webkit-fill-available;
+    }
+
+</style>
+<body>
+    <div class="full-page" style="display: flex; justify-content: center;">
+        <div class="page-content">
+            <!-- ---------------------Page Title---------------------- -->
+            <div class="title">
+                <div class="content">
+                    <p class="text" style="border-bottom: 1px solid green;"><b>Bundle & Save</b></p>
+                </div>
+            </div>
+
+            <!-- ---------------------Item 1---------------------- -->
+
+            <div class="border">
+                <div class="cart-item">
+                    <div class="grid-item-1">
+                        <input style="text-align: center;" type="checkbox" name="1" id="checkbox1" checked>
+                    </div>
+                    <div class="grid-item-2">
+                        <label for="itemName">1 Pair</label>
+                        <p class="price"><b>DKK 195.00</b></p>
+                        <div class="size" id="showData1">
+                            <label for="size">Size</label>
+                            <select name="size" id="size">
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                            &nbsp;
+                            <label for="color">Color</label>
+                            <select name="color" id="color">
+                                <option value="Red">Red</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Green">Green</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid-item-3">
+                        <span class="discount">50% OFF</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------------Item 2---------------------- -->
+
+            <div class="border">
+                <div class="cart-item">
+                    <div class="grid-item-1">
+                        <input style="text-align: center;" type="checkbox" name="2" id="checkbox2" checked>
+                    </div>
+                    <div class="grid-item-2">
+                        <label for="itemName">2 Pair</label>
+                        <p class="price"><b>DKK 345.00</b> <br>
+                            <del><small>DKK 195.00</small></del>
+                        </p>
+                        <div class="size" id="showData2">
+                            <label for="size">Size</label>
+                            <select name="size" id="size">
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                            &nbsp;
+                            <label for="color">Color</label>
+                            <select name="color" id="color">
+                                <option value="Red">Red</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Green">Green</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid-item-3">
+                        <span class="discount">Most Popular <br> 40% OFF</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- ---------------------Item 3---------------------- -->
+
+            <div class="border">
+                <div class="cart-item">
+                    <div class="grid-item-1">
+                        <input style="text-align: center;" type="checkbox" name="3" id="checkbox3" checked>
+                    </div>
+                    <div class="grid-item-2">
+                        <label for="itemName">3 Pair</label>
+                        <p class="price"><b>DKK 528.00</b></p>
+                        <div class="size" id="showData3">
+                            <label for="size">Size</label>
+                            <select name="size" id="size">
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                            &nbsp;
+                            <label for="color">Color</label>
+                            <select name="color" id="color">
+                                <option value="Red">Red</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Green">Green</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid-item-3">
+                        <span class="discount">60% OFF</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------------Total Cost---------------------- -->
+
+            <div class="total">
+                <div class="note">
+                    <p style="color: #007F61;">Free 2 Day Shipping</p>
+                </div>
+                <div class="cart-total">
+                    <p><b>Total:</b>DKK 360.00</p>
+                </div>
+            </div>
+
+            <!-- ---------------------Manipulated Message---------------------- -->
+
+            <div class="message" id="message"></div>
+
+            <!-- ---------------------Button---------------------- -->
+
+            <div style="text-align: center; background-color: #007F61; padding: 10px;" class="button">
+                <button class="cartButton" onclick="showMessage()"><b>+ Add To Cart</b></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------Script---------------------- -->
+    <script>
+        function showMessage(){
+            alert('Item added to cart')
+            document.getElementById('message').innerText='Item added to cart'
+            console.log('Item added to cart')
+        }
+
+        // Checkbox1
+        const checkbox1 = document.getElementById('checkbox1');
+  
+        checkbox1.addEventListener('click', function show1() {
+        if (this.checked) {
+            document.getElementById('showData1').style.display='block'
+        } else {
+            document.getElementById('showData1').style.display='none'
+        }
+        });
+
+
+
+        // Checkbox2
+        const checkbox2 = document.getElementById('checkbox2');
+
+        checkbox2.addEventListener('click', function() {
+        if (this.checked) {
+            document.getElementById('showData2').style.display='block'
+        } else {
+            document.getElementById('showData2').style.display='none'
+        }
+        });
+
+        // Checkbox3
+        const checkbox3 = document.getElementById('checkbox3');
+
+        checkbox3.addEventListener('click', function() {
+        if (this.checked) {
+            document.getElementById('showData3').style.display='block'
+        } else {
+            document.getElementById('showData3').style.display='none'
+        }
+        });
+
+        
+    </script>
+</body>
+</html>
